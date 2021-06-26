@@ -1,11 +1,5 @@
 # Set-ExecutionPolicy Unrestricted
 
-// Telemetriedatenübertragung stoppen
-
-Get-ScheduledTask "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" | Disable-ScheduledTask
-Get-ScheduledTask '*tele*' | Disable-ScheduledTask
-
-// Remove Basic Insatll Programs
 Get-AppxPackage *skype* | Remove-AppxPackage
 Get-AppxPackage *xing* | Remove-AppxPackage
 Get-AppxPackage *phone* | Remove-AppxPackage
